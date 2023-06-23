@@ -41,8 +41,8 @@ const UseFetchData = (search: string | undefined = '') => {
       } catch (error: any) {
         if (error.code === 'ECONNABORTED') {
           setStatusMsg('O servidor demorou para responder, tente mais tarde')
-        }
-        if (error.response) {
+          setLoading(false)
+        } else if (error.response) {
           const status: number = error.response.status
           if (
             status === 500 ||
@@ -70,6 +70,7 @@ const UseFetchData = (search: string | undefined = '') => {
       fetchData()
     }
   }, [isDataFetched, search])
+
   return { dataGames, statusMsg, loading }
 }
 

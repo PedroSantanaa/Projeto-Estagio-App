@@ -6,7 +6,7 @@ import React from 'react'
 
 const Search = () => {
   const params = useParams()
-  const title = params.game
+  const title = decodeURIComponent(params.game)
   const { dataGames, statusMsg, loading } = UseFetchData(title)
 
   return (
