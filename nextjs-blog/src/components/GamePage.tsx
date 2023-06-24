@@ -43,7 +43,7 @@ const HomePage = (props: Props) => {
           <div className="mb-2 ml-auto mr-4 w-96">
             <form onSubmit={handleSubmit}>
               <input
-                className="h-10 w-full border border-gray-300 bg-gray-50 p-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-xs"
+                className="h-10 w-52 border border-gray-300 bg-gray-50 p-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:w-full sm:text-xs md:w-full lg:w-full xl:w-full 2xl:w-full"
                 type="text"
                 placeholder="Search for title name "
                 onChange={(ev) => setSearch(ev.target.value)}
@@ -59,9 +59,11 @@ const HomePage = (props: Props) => {
         </div>
       )}
       {dataGames.length > 0 && (
-        <div className="grid grid-cols-2 gap-3 pl-3 pr-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
+        <div className="grid grid-cols-1 justify-center gap-3 pl-3 pr-3 text-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
           {dataGames.slice(0, displayedGames).map((game) => (
-            <GameCard key={game.id} {...game} />
+            <div key={game.id} className="flex justify-center">
+              <GameCard {...game} />
+            </div>
           ))}
         </div>
       )}

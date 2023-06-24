@@ -15,9 +15,6 @@ module.exports = {
       colors: {
         moon: '#ccbb9b',
       },
-      screens: {
-        '3xl:': '1600px',
-      },
     },
   },
   plugins: [],

@@ -10,7 +10,7 @@ interface Props {
 
 const GameCard = ({ title, short_description, thumbnail, genre }: Props) => {
   return (
-    <div className="flex h-[340px] w-[300px] flex-col items-center justify-center border-2 pl-2 pr-2 md:w-[370px] lg:w-[330px] xl:w-[400px] 2xl:w-[500px]">
+    <div className="flex h-[340px] w-[250px] flex-col items-center justify-center border-2 pl-2 pr-2 md:w-[370px] lg:w-[330px] xl:w-[400px] 2xl:w-[500px]">
       <h1 className="text-lg font-bold dark:text-moon lg:text-sm xl:text-xl 2xl:text-2xl">
         {title}
       </h1>
