@@ -9,7 +9,7 @@ import Alert from '@/components/Alert'
 const GenrePage = () => {
   const router = useRouter()
   const params = useParams()
-  const genre = params.genre
+  const genre = decodeURIComponent(params.genre)
   const { dataGames, statusMsg, loading } = UseFetchData('', genre)
   const [displayedGames, setDisplayedGames] = useState(6)
   const handleShowMore = () => {

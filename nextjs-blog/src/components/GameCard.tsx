@@ -26,7 +26,9 @@ const GameCard = ({ title, short_description, thumbnail, genre }: Props) => {
       <p className="pt-3 text-xs text-gray-500 dark:text-gray-400 xl:text-base 2xl:text-lg">
         {short_description}
       </p>
-      <Link href={`/genre/${genre}`}>{genre}</Link>
+      <Link href={`/genre/${genre}`} className="cursor-pointer text-blue-500">
+        {genre}
+      </Link>
     </div>
   )
 }
