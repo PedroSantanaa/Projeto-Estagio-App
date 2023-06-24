@@ -34,26 +34,32 @@ const HomePage = (props: Props) => {
         </div>
       )}
       {dataGames.length > 0 && (
-        <div className="flex flex-col items-center justify-center ">
-          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-            {props.title}
-          </h1>
-          <form onSubmit={handleSubmit}>
-            <input
-              className="w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-xs"
-              type="text"
-              placeholder="Search for title name "
-              onChange={(ev) => setSearch(ev.target.value)}
-              required
-            />
-            <button className="mb-2 mr-2 mt-2 rounded-full bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700">
-              Search
-            </button>
-          </form>
+        <div className="mb-2 flex flex-col border-b-2">
+          <div>
+            <h1 className="mb-4 mt-4 text-center font-serif text-4xl font-extrabold leading-none tracking-tight text-moon dark:text-moon md:text-5xl lg:text-6xl">
+              {props.title}
+            </h1>
+          </div>
+          <div className="mb-2 ml-auto mr-4 w-96">
+            <form onSubmit={handleSubmit}>
+              <input
+                className="h-10 w-full border border-gray-300 bg-gray-50 p-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-xs"
+                type="text"
+                placeholder="Search for title name "
+                onChange={(ev) => setSearch(ev.target.value)}
+                required
+              />
+              <div className="flex">
+                <button className="mb-2 ml-auto mt-2 rounded-full bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
       {dataGames.length > 0 && (
-        <div className="grid grid-cols-3 gap-3 pl-3 pr-3">
+        <div className="grid grid-cols-2 gap-3 pl-3 pr-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
           {dataGames.slice(0, displayedGames).map((game) => (
             <GameCard key={game.id} {...game} />
           ))}
@@ -63,7 +69,7 @@ const HomePage = (props: Props) => {
         <div className="text-center">
           <button
             onClick={handleShowMore}
-            className="mb-2 mr-2 mt-5 w-80 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 "
+            className="mb-5 mr-2 mt-5 w-80 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 "
           >
             Exibir Mais
           </button>
