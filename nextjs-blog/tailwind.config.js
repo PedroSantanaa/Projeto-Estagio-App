@@ -15,6 +15,10 @@ module.exports = {
       },
       colors: {
         moon: '#ccbb9b',
+        carbon: '#A9A9A9',
+        watermelon: '#FF3B3F',
+        mahogany: '#CC2F32',
+        sky: '#CAEBF2',
       },
     },
   },
