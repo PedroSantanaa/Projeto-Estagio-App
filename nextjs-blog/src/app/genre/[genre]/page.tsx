@@ -1,11 +1,12 @@
 'use client'
+import GenrePage from '@/templates/Genre/GenrePage'
 
-import GamePage from '../templates/Home/GamePage'
-
-export default async function Home() {
+const Genre = () => {
   return (
     <div className="h-screen overflow-auto bg-[#0e0e1a] bg-contain bg-scroll text-white">
-      <GamePage />
+      <GenrePage />
     </div>
   )
 }
+
+export default Genre

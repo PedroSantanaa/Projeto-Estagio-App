@@ -12,7 +12,10 @@ interface Game {
 
 type StatusMessage = string
 
-const UseFetchData = (search: string | undefined = '') => {
+const UseFetchData = (
+  search: string | undefined = '',
+  genre: string | undefined = '',
+) => {
   const [dataGames, setDataGames] = useState<Game[]>([])
   const [statusMsg, setStatusMsg] = useState<StatusMessage>('')
   const [isDataFetched, setIsDataFetched] = useState(false)
@@ -27,6 +30,14 @@ const UseFetchData = (search: string | undefined = '') => {
           })
           const filteredData = data.filter((game) =>
             game.title.toLowerCase().includes(search.toLowerCase()),
+          )
+          setDataGames(filteredData)
+        } else if (genre !== '') {
+          const { data } = await api.get<Game[]>('/data', {
+            timeout: 5000,
+          })
+          const filteredData = data.filter((game) =>
+            game.genre.toLowerCase().includes(genre.toLowerCase()),
           )
           setDataGames(filteredData)
         } else {
@@ -69,7 +80,7 @@ const UseFetchData = (search: string | undefined = '') => {
     if (!isDataFetched) {
       fetchData()
     }
-  }, [isDataFetched, search])
+  }, [isDataFetched, search, genre])
 
   return { dataGames, statusMsg, loading }
 }

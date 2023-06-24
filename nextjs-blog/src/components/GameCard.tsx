@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Props {
   title: string
@@ -19,13 +20,13 @@ const GameCard = ({ title, short_description, thumbnail, genre }: Props) => {
         priority={true}
         alt="thumbGame"
         width={200}
-        height={200}
+        height={150}
         className="h-[150px] w-[200px] rounded-lg shadow-md dark:shadow-gray-800 lg:h-[160px] lg:w-[210px] xl:h-[210px] xl:w-[250px] 2xl:h-[250px] 2xl:w-[250px]"
       />
       <p className="pt-3 text-xs text-gray-500 dark:text-gray-400 xl:text-base 2xl:text-lg">
         {short_description}
       </p>
-      <span>{genre}</span>
+      <Link href={`/genre/${genre}`}>{genre}</Link>
     </div>
   )
 }
