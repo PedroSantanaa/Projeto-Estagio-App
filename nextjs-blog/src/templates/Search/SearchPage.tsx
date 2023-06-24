@@ -21,7 +21,10 @@ const SearchPage = () => {
       {loading && statusMsg === '' && <Loading />}
       {dataGames.length >= 0 && (
         <div className="mb-2 flex flex-col border-b-2">
-          <Header title="JOGOS ENCONTRADOS" />
+          <Header
+            title="JOGOS ENCONTRADOS"
+            desc="Todos os jogos encontrados com base na pesquisa de titulo"
+          />
         </div>
       )}
       {!loading && statusMsg === 'ok' && dataGames.length === 0 && (

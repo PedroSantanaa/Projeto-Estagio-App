@@ -2,6 +2,7 @@ import React from 'react'
 
 type Props = {
   title: string
+  desc: string
 }
 
 const Header = (props: Props) => {
@@ -10,6 +11,7 @@ const Header = (props: Props) => {
       <h1 className="mb-4 mt-4 text-center font-serif text-4xl font-extrabold leading-none tracking-tight text-moon dark:text-moon md:text-5xl lg:text-6xl">
         {props.title}
       </h1>
+      <p className="text-center">{props.desc}</p>
     </div>
   )
 }

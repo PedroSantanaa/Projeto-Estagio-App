@@ -17,7 +17,10 @@ const HomePage = () => {
       {loading && statusMsg === '' && <Loading />}
       {dataGames.length > 0 && (
         <div className="mb-2 flex flex-col border-b-2">
-          <Header title="BIBLIOTECA DE JOGOS" />
+          <Header
+            title="BIBLIOTECA DE JOGOS"
+            desc="Aqui você encontrará exposto diversos jogos variados, onde será possivel pesquisar um titulo especifico e também clicar no genero do jogo para pesquisar semelhantes"
+          />
           <SearchBar />
         </div>
       )}

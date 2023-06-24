@@ -20,7 +20,10 @@ const GenrePage = () => {
       {loading && statusMsg === '' && <Loading />}
       {dataGames.length >= 0 && (
         <div className="mb-2 flex flex-col border-b-2">
-          <Header title={`JOGOS DO GENERO ${genre} ENCONTRADOS`} />
+          <Header
+            title={`JOGOS DO GENERO ${genre} ENCONTRADOS`}
+            desc="Todos os jogos encontrados baseado no genero selecionado"
+          />
         </div>
       )}
       {!loading && statusMsg === 'ok' && dataGames.length === 0 && (
