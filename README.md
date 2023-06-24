@@ -24,7 +24,7 @@ Projeto feito para o teste de Estágio Frontend React na App Masters, onde foi d
 ![HomePage](https://github.com/PedroSantanaa/Projeto-Estagio-App/assets/62779635/82cae2d7-661b-43c3-92a5-051244bb45d3)
 
 ### Search Page:
-![Search Page](https://github.com/PedroSantanaa/Projeto-Estagio-App/assets/62779635/c35275c0-e3e8-4226-af41-e808dfc86543)
+![Search Page](https://github.com/PedroSantanaa/Projeto-Estagio-App/assets/62779635/f9a9013c-36d1-45f5-aa4d-3ead2e122658)
 
 ### Genre Page:
 ![Genre Page](https://github.com/PedroSantanaa/Projeto-Estagio-App/assets/62779635/308f751f-3ef0-4ffc-b11d-37c7724aecb0)
